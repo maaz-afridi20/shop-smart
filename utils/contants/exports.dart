@@ -22,6 +22,9 @@ export 'package:shop_smart/feature/authentication/screens/onboarding/widgets/onb
 export 'package:shop_smart/feature/authentication/screens/onboarding/widgets/onboarding_next_btn.dart';
 export 'package:shop_smart/feature/authentication/screens/onboarding/widgets/onboarding_page.dart';
 export 'package:shop_smart/feature/authentication/screens/onboarding/widgets/onboarding_skip.dart';
+export 'package:shop_smart/feature/authentication/screens/password_configuration/forgot_password.dart';
+export 'package:shop_smart/feature/authentication/screens/password_configuration/reset_password.dart';
+export 'package:shop_smart/feature/authentication/screens/signup/signup_screen.dart';
 export 'package:shop_smart/feature/authentication/screens/signup/verify_email_screen.dart';
 export 'package:shop_smart/feature/authentication/screens/signup/widgets/t_signup_form.dart';
 export 'package:shop_smart/feature/authentication/screens/signup/widgets/t_termand_conditions.dart';

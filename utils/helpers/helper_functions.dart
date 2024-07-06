@@ -53,11 +53,11 @@ class THelperFunctions {
   }
 
   static void navigateToOtherScreen(BuildContext context, Widget screen) {
-    Get.to(() => screen);
+    Get.to(screen);
   }
 
   static void navigateOfAll(BuildContext context, Widget screen) {
-    Get.offAll(() => screen);
+    Get.offAll(screen);
   }
 
   static String truncateText(String text, int maxlength) {

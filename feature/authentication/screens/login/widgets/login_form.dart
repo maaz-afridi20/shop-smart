@@ -1,4 +1,3 @@
-import 'package:shop_smart/feature/authentication/screens/signup/signup_screen.dart';
 import 'package:shop_smart/utils/contants/exports.dart';
 
 class TLoginForm extends StatelessWidget {
@@ -36,7 +35,8 @@ class TLoginForm extends StatelessWidget {
                 //
                 // forget password.
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => THelperFunctions.navigateToOtherScreen(
+                        context, const ForgotPassword()),
                     child: const Text(TTextStrings.forgotPassword))
               ]),
               const SizedBox(height: TSizes.spaceBwSections),
