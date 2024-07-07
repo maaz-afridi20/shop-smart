@@ -65,8 +65,7 @@ class TSignupForm extends StatelessWidget {
       SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-              onPressed: () => THelperFunctions.navigateToOtherScreen(
-                  context, const VerifyEmailScreen()),
+              onPressed: () => Get.to(() => const VerifyEmailScreen()),
               child: const Text(TTextStrings.createAccount)))
     ]));
   }

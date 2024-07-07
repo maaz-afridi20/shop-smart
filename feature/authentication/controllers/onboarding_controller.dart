@@ -4,7 +4,7 @@ class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find();
   // variables
   final PageController pageController = PageController();
-  var currentPageIndex = 0.obs;
+  Rx<int> currentPageIndex = 0.obs;
   //
   void updatePageIndicator(index) => currentPageIndex = index;
 
@@ -17,7 +17,7 @@ class OnboardingController extends GetxController {
   //
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      THelperFunctions.navigateOfAll(Get.context!, const LoginScreen());
+      Get.offAll(() => const LoginScreen());
     } else {
       int page = currentPageIndex.value++;
       pageController.jumpToPage(page);

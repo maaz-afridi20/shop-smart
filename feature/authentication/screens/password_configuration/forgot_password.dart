@@ -33,8 +33,7 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => THelperFunctions.navigateToOtherScreen(
-                        context, const ResetPasswordScreen()),
+                    onPressed: () => Get.off(() => const ResetPasswordScreen()),
                     child: const Text(TTextStrings.submit)))
           ],
         ),

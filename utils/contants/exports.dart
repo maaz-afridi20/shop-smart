@@ -28,6 +28,8 @@ export 'package:shop_smart/feature/authentication/screens/signup/signup_screen.d
 export 'package:shop_smart/feature/authentication/screens/signup/verify_email_screen.dart';
 export 'package:shop_smart/feature/authentication/screens/signup/widgets/t_signup_form.dart';
 export 'package:shop_smart/feature/authentication/screens/signup/widgets/t_termand_conditions.dart';
+export 'package:shop_smart/feature/shop/screens/home/home.dart';
+export 'package:shop_smart/navigation_menu.dart';
 export 'package:shop_smart/utils/contants/colors.dart';
 export 'package:shop_smart/utils/contants/image_strings.dart';
 export 'package:shop_smart/utils/contants/sizes.dart';
