@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:shop_smart/utils/contants/exports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,8 +6,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("home"),
+      appBar: AppBar(title: const Text("home")),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              color: basicPprimaryColor,
+              padding: EdgeInsets.zero,
+            ),
+          ],
+        ),
       ),
     );
   }
