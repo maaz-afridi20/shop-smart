@@ -10,6 +10,8 @@ export 'package:get/get_navigation/get_navigation.dart';
 export 'package:iconsax/iconsax.dart';
 export 'package:shop_smart/app.dart';
 export 'package:shop_smart/common/styles/spacing_style.dart';
+export 'package:shop_smart/common/widgets/custom_shapes/container/circular_container.dart';
+export 'package:shop_smart/common/widgets/custom_shapes/curved_edges/curved_edges.dart';
 export 'package:shop_smart/common/widgets/general/social_buttons.dart';
 export 'package:shop_smart/common/widgets/general/t_form_divider.dart';
 export 'package:shop_smart/common/widgets/success_screen/success_screen.dart';

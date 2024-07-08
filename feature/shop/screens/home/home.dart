@@ -10,9 +10,28 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              color: basicPprimaryColor,
-              padding: EdgeInsets.zero,
+            ClipPath(
+              clipper: TCustomCurvedEdges(),
+              child: Container(
+                color: basicPprimaryColor,
+                padding: EdgeInsets.zero,
+                child: SizedBox(
+                  height: 400,
+                  child: Stack(children: [
+                    Positioned(
+                      top: -150,
+                      right: -250,
+                      child: TCircularContainer(
+                          backgroundColor: textWhiteColor.withOpacity(0.1)),
+                    ),
+                    Positioned(
+                        top: 100,
+                        right: -300,
+                        child: TCircularContainer(
+                            backgroundColor: textWhiteColor.withOpacity(0.1))),
+                  ]),
+                ),
+              ),
             ),
           ],
         ),
@@ -20,3 +39,19 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
+                  //
+                  //
+                  // const Column(
+                  //   children: [
+                      //
+                      // appber
+
+                      //
+                      //searchbar
+
+                      //
+                      //categories
+                //    ],
+                  //)
