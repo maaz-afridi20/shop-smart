@@ -1,57 +1,79 @@
 import 'package:shop_smart/utils/contants/exports.dart';
 
+import '../../../../common/widgets/layout/grid_layout.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("home")),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ClipPath(
-              clipper: TCustomCurvedEdges(),
-              child: Container(
-                color: basicPprimaryColor,
-                padding: EdgeInsets.zero,
-                child: SizedBox(
-                  height: 400,
-                  child: Stack(children: [
-                    Positioned(
-                      top: -150,
-                      right: -250,
-                      child: TCircularContainer(
-                          backgroundColor: textWhiteColor.withOpacity(0.1)),
-                    ),
-                    Positioned(
-                        top: 100,
-                        right: -300,
-                        child: TCircularContainer(
-                            backgroundColor: textWhiteColor.withOpacity(0.1))),
-                  ]),
+      body: SafeArea(
+          child: SingleChildScrollView(
+              child: Column(children: [
+        //
+        // primary header..
+        TPrimaryHeaderContainer(
+            child: Column(children: [
+          //
+          //! appbar
+          const THomeAppbar(),
+          Gap(TSizes.spaceBwSections.h),
+
+          //
+          //! search bar
+          const TSearchContainer(text: "Search In Store"),
+          Gap(TSizes.spaceBwSections.h),
+
+          //
+          //! categories
+          Padding(
+              padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+              child: Column(children: [
+                const TSectionHeading(
+                    title: "Popular Categories",
+                    showActionBtn: false,
+                    textColor: white),
+                Gap(TSizes.spaceBwItems.h),
+
+                //
+                // Scrollable categories
+                const THomeCategories()
+              ]))
+        ])),
+
+        //
+        // below the blue part
+        // starting of BODY
+
+        Padding(
+            padding: EdgeInsets.all(TSizes.defaultSpace.h),
+            child: Column(
+              children: [
+                //
+                // promo slider
+                const TPromoSlider(banners: [
+                  TImages.promoBanner3,
+                  TImages.promoBanner2,
+                  TImages.promoBanner4
+                ]),
+                Gap(TSizes.spaceBwSections.h),
+
+                //
+                // Heading
+                const TSectionHeading(
+                    title: "Popular Products", showActionBtn: false),
+                Gap(TSizes.spaceBwItems.h),
+
+                //
+                // popular products
+                TGridLayout(
+                  itemBuilder: (index, _) => const TProductCardVertical(),
+                  itemCount: 3,
                 ),
-              ),
-            ),
-          ],
-        ),
-      ),
+              ],
+            ))
+      ]))),
     );
   }
 }
-
-
-                  //
-                  //
-                  // const Column(
-                  //   children: [
-                      //
-                      // appber
-
-                      //
-                      //searchbar
-
-                      //
-                      //categories
-                //    ],
-                  //)
