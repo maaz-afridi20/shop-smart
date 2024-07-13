@@ -1,3 +1,5 @@
+import 'package:shop_smart/feature/shop/screens/store/store.dart';
+
 import 'utils/contants/exports.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -35,7 +37,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.blue),
+    const StoreScreen(),
     Container(color: Colors.yellow),
     Container(color: Colors.red)
   ];

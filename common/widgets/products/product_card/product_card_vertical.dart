@@ -22,15 +22,18 @@ class TProductCardVertical extends StatelessWidget {
               // Thumbnail, wishlist, discount tag
               TRoundedContainer(
                   height: 180.h,
-                  width: 180.w,
+                  width: THelperFunctions.screenWidth(),
                   padding: const EdgeInsets.all(TSizes.sm),
                   backgroundColor: darkMode ? black : light,
                   child: Stack(children: [
                     //
                     // Thumbnail image
 
-                    const TRoundedImg(
-                        imgUrl: TImages.productImage1, applyImgRadius: true),
+                    TRoundedImg(
+                      width: THelperFunctions.screenWidth(),
+                      imgUrl: TImages.productImage1,
+                      applyImgRadius: true,
+                    ),
 
                     //
                     // sale tag

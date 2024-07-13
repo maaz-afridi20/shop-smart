@@ -1,24 +1,28 @@
 import 'package:shop_smart/utils/contants/exports.dart';
 
-class TCounterIcon extends StatelessWidget {
-  const TCounterIcon(
-      {super.key, required this.onPress, required this.iconColor});
+class TCartCounterIcon extends StatelessWidget {
+  const TCartCounterIcon(
+      {super.key, required this.onPress, this.iconColor = white});
 
   final VoidCallback onPress;
-  final Color iconColor;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
+    final darkMode = THelperFunctions.isDarkMode(context);
     return Padding(
-      padding: const EdgeInsets.only(right: 15),
+      padding: const EdgeInsets.only(right: 15, top: 8),
       child: Badge(
-        backgroundColor: black,
+        backgroundColor: darkMode ? white : black,
         alignment: Alignment.topRight,
-        label: const Text("2"),
-        textStyle: Theme.of(context).textTheme.labelLarge!.apply(color: white),
+        label: Text("2",
+            style: Theme.of(context)
+                .textTheme
+                .labelLarge!
+                .apply(color: darkMode ? black : white)),
         child: IconButton(
             onPressed: onPress,
-            icon: Icon(Iconsax.shopping_bag, color: iconColor)),
+            icon: Icon(Iconsax.shopping_bag, color: darkMode ? white : black)),
       ),
     );
   }

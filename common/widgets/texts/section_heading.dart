@@ -1,14 +1,13 @@
 import '../../../utils/contants/exports.dart';
 
 class TSectionHeading extends StatelessWidget {
-  const TSectionHeading({
-    super.key,
-    required this.title,
-    this.btnTitle = "View All",
-    this.showActionBtn = true,
-    this.onPress,
-    this.textColor,
-  });
+  const TSectionHeading(
+      {super.key,
+      required this.title,
+      this.btnTitle = "View All",
+      this.showActionBtn = true,
+      this.onPress,
+      this.textColor = white});
 
   final String title, btnTitle;
   final bool showActionBtn;

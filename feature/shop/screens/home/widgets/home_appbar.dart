@@ -1,9 +1,7 @@
 import '../../../../../utils/contants/exports.dart';
 
 class THomeAppbar extends StatelessWidget {
-  const THomeAppbar({
-    super.key,
-  });
+  const THomeAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +18,7 @@ class THomeAppbar extends StatelessWidget {
                 .headlineSmall!
                 .copyWith(color: grey)),
       ]),
-      actions: [TCounterIcon(onPress: () {}, iconColor: white)],
+      actions: [TCartCounterIcon(onPress: () {}, iconColor: white)],
     );
   }
 }
