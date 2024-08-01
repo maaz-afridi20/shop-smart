@@ -18,6 +18,7 @@ class TAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final darkMode = THelperFunctions.isDarkMode(context);
     return Padding(
         padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
         child: AppBar(
@@ -25,7 +26,8 @@ class TAppbar extends StatelessWidget implements PreferredSizeWidget {
           leading: showBackArrow
               ? IconButton(
                   onPressed: () => Get.back(),
-                  icon: const Icon(Iconsax.arrow_left))
+                  icon: Icon(Iconsax.arrow_left,
+                      color: darkMode ? white : darkGrey))
               : leadingIcon != null
                   ? IconButton(
                       onPressed: leadingOnPress, icon: Icon(leadingIcon))

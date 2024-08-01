@@ -7,7 +7,7 @@ class TSectionHeading extends StatelessWidget {
       this.btnTitle = "View All",
       this.showActionBtn = true,
       this.onPress,
-      this.textColor = white});
+      this.textColor});
 
   final String title, btnTitle;
   final bool showActionBtn;
@@ -17,6 +17,7 @@ class TSectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title,
             style: Theme.of(context)

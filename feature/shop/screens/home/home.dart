@@ -1,7 +1,5 @@
 import 'package:shop_smart/utils/contants/exports.dart';
 
-import '../../../../common/widgets/layout/grid_layout.dart';
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -39,7 +37,8 @@ class HomeScreen extends StatelessWidget {
                 //
                 // Scrollable categories
                 const THomeCategories()
-              ]))
+              ])),
+          Gap(TSizes.spaceBwSections.h)
         ])),
 
         //

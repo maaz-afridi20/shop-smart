@@ -7,7 +7,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final darkMode = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailsScreen()),
       child: Container(
           width: 180.w,
 
@@ -17,6 +17,7 @@ class TProductCardVertical extends StatelessWidget {
               borderRadius: BorderRadius.circular(TSizes.productImageRadius),
               color: darkMode ? darkerGrey : white),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //
               // Thumbnail, wishlist, discount tag
@@ -67,23 +68,19 @@ class TProductCardVertical extends StatelessWidget {
               const Gap(TSizes.sm),
               //
               // Details.
-              Padding(
-                  padding: const EdgeInsets.only(left: TSizes.sm),
+              const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const TProductTitleText(
-                            title: "Green Nike Shoes", smallSize: true),
-                        const Gap(TSizes.spaceBwItems / 2),
-                        Row(children: [
-                          Text("Nike",
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 1,
-                              style: Theme.of(context).textTheme.labelMedium),
-                          const Gap(TSizes.xs),
-                          const Icon(Iconsax.verify5,
-                              color: basicPprimaryColor, size: TSizes.iconXs),
-                        ])
+                        TProductTitleText(
+                            title: "Green Nike Shoes just fot checkingggg ",
+                            smallSize: true),
+                        Gap(TSizes.spaceBwItems / 2),
+                        //
+                        //
+                        // title with vefity icon
+                        TBrandTitleWithVerifyIcon(title: "Nike")
                       ])),
               const Spacer(),
               Padding(
@@ -118,3 +115,10 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
+
+// Text(title,
+//             overflow: TextOverflow.ellipsis,
+//             maxLines: 1,
+//             style: Theme.of(context).textTheme.labelMedium)

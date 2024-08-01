@@ -20,9 +20,14 @@ class TCartCounterIcon extends StatelessWidget {
                 .textTheme
                 .labelLarge!
                 .apply(color: darkMode ? black : white)),
-        child: IconButton(
-            onPressed: onPress,
-            icon: Icon(Iconsax.shopping_bag, color: darkMode ? white : black)),
+        child: Container(
+          decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.5), shape: BoxShape.circle),
+          child: IconButton(
+              onPressed: onPress,
+              icon:
+                  Icon(Iconsax.shopping_bag, color: darkMode ? white : black)),
+        ),
       ),
     );
   }

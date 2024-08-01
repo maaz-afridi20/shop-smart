@@ -1,5 +1,3 @@
-import 'package:shop_smart/feature/shop/screens/store/store.dart';
-
 import 'utils/contants/exports.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -38,8 +36,8 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.yellow),
-    Container(color: Colors.red)
+    const FavouriteScreen(),
+    const SettingsScreen()
   ];
 
   void updateCurrentIndex(index) => selectedIndex.value = index;
